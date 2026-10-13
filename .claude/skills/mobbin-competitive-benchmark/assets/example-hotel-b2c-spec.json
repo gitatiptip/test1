@@ -1,0 +1,1097 @@
+{
+ "title": "Hotel Booking (B2C) — Competitive Benchmark built from Mobbin",
+ "subtitle": "Desk benchmark of real mobile booking flows captured on Mobbin, following the structure of the 'hotel-booking-competitor-benchmark' kit.",
+ "platforms": [
+  {
+   "name": "Booking.com",
+   "on_mobbin": true
+  },
+  {
+   "name": "Agoda",
+   "on_mobbin": true
+  },
+  {
+   "name": "Trip.com",
+   "on_mobbin": true
+  },
+  {
+   "name": "Airbnb",
+   "on_mobbin": true
+  },
+  {
+   "name": "Marriott Bonvoy",
+   "on_mobbin": true
+  },
+  {
+   "name": "World of Hyatt",
+   "on_mobbin": true
+  },
+  {
+   "name": "Traveloka",
+   "on_mobbin": false
+  },
+  {
+   "name": "Tiket.com",
+   "on_mobbin": false
+  }
+ ],
+ "readme": [
+  {
+   "heading": "HOW THIS DIFFERS FROM THE ORIGINAL KIT",
+   "rows": [
+    [
+     "Evidence source",
+     "The original kit asks you to run each booking yourself. This version is pre-filled from Mobbin screen recordings of each app's iOS booking flow. Every observation is traceable to a flow on the 'Evidence Index' tab."
+    ],
+    [
+     "What Mobbin can show",
+     "Layout, information hierarchy, copy, price presentation, number of steps, CTA wording, policies shown, and payment options visible at the time of capture."
+    ],
+    [
+     "What Mobbin cannot show",
+     "Speed, error handling, autocomplete quality, animation feel, guest-checkout availability when the capture was logged in, and payment methods for markets other than the one captured. These rows are marked 'Self-test' in the Evidence column."
+    ],
+    [
+     "Capture context",
+     "Captures are from different markets and dates (Booking.com: US, 2026 dates; Agoda: Singapore, 2026; Trip.com: Vietnam/US$, 2025; Airbnb: US, 2025; Marriott: Japan/Singapore member, 2025; Hyatt: US, 2024). Apps may have changed since. Treat findings as a strong starting point, then validate the top items by hand."
+    ]
+   ]
+  },
+  {
+   "heading": "PLATFORM SET",
+   "rows": [
+    [
+     "Covered on Mobbin",
+     "Booking.com (global OTA) · Agoda (regional OTA, SEA-strong) · Trip.com (regional OTA, stand-in for a local Asian OTA) · Airbnb (alternative lodging) · Marriott Bonvoy (chain direct) · World of Hyatt (chain direct, booking steps only)."
+    ],
+    [
+     "Not on Mobbin",
+     "Traveloka and Tiket.com returned no results on Mobbin. Their columns are left in yellow for you to fill by self-testing. They matter most for Indonesian payment methods, so prioritise them for stage 6."
+    ]
+   ]
+  },
+  {
+   "heading": "HOW TO USE",
+   "rows": [
+    [
+     "1. Read the matrix",
+     "Each cell describes what the app does for that criterion. 'Not captured' means the Mobbin flow did not include that moment, not that the app lacks it."
+    ],
+    [
+     "2. Check the scores",
+     "Green STAGE SCORE rows hold a 1–5 desk score per platform, judged from the screenshots. Edit any score you disagree with; the Scoring Summary tab updates automatically."
+    ],
+    [
+     "3. Fill the gaps",
+     "Yellow cells (Traveloka, Tiket.com, and 'Self-test' rows) need hands-on testing. Do it on mobile first, as the original kit advises."
+    ],
+    [
+     "4. Use the patterns",
+     "The 'Patterns' tab lists what to copy and what to avoid, each with the Mobbin link to show stakeholders."
+    ]
+   ]
+  },
+  {
+   "heading": "SCORING SCALE (same as original kit)",
+   "rows": [
+    [
+     "5 — Exemplary",
+     "Frictionless. Steal this pattern outright."
+    ],
+    [
+     "4 — Good",
+     "Works well, minor nitpicks only."
+    ],
+    [
+     "3 — Acceptable",
+     "Gets the job done; nothing memorable either way."
+    ],
+    [
+     "2 — Poor",
+     "Noticeable friction, hesitation, or backtracking."
+    ],
+    [
+     "1 — Broken",
+     "I would abandon here if this were a real booking."
+    ]
+   ]
+  },
+  {
+   "heading": "WHY THESE CRITERIA",
+   "rows": [
+    [
+     "Abandonment drivers",
+     "Criteria lean toward the top documented causes of booking abandonment cited in the original kit (Baymard Institute): unexpected extra costs, forced account creation, long or complicated checkout, payment trust, and total cost not shown upfront. The 'Driver' column links each criterion to one of these."
+    ]
+   ]
+  },
+  {
+   "heading": "LEGEND",
+   "rows": [
+    [
+     "Colours",
+     "Blue band = funnel stage · Green row = stage score (editable) · Yellow = needs your input · Red cell = notable friction"
+    ]
+   ]
+  }
+ ],
+ "stages": [
+  {
+   "name": "1. ENTRY & SEARCH",
+   "criteria": [
+    {
+     "criterion": "Search is the primary home content",
+     "look_for": "Is the search form the first thing on the stays home screen, above promos?",
+     "driver": "Search is the front door",
+     "evidence": "Mobbin",
+     "observations": {
+      "Booking.com": "Search card (destination, dates, guests) is the first block on the Stays tab.",
+      "Agoda": "'All rooms' search panel at top with Overnight / Day Use tabs.",
+      "Trip.com": "Stays search card at top over a hero image.",
+      "Marriott Bonvoy": "Book tab; offer pages lead straight to a Search button."
+     },
+     "best": "Booking.com",
+     "implication": "Put search above any promo on the home screen."
+    },
+    {
+     "criterion": "Date picker shows nights clearly",
+     "look_for": "Does the picker show the number of nights while choosing?",
+     "driver": "Checkout too long / errors",
+     "evidence": "Mobbin",
+     "observations": {
+      "Booking.com": "Date field shows the range only (e.g. 'Sat, Mar 7 – Sun, Mar 8'); night count not shown in the field.",
+      "Agoda": "Tooltip on the range shows '(1 night)' and the confirm button reads 'OK (1 night)'.",
+      "Trip.com": "Field shows the dates plus '1 night' on the right.",
+      "Marriott Bonvoy": "Price calendar shows a nightly price under every date; footer shows '(2 Nights) 41 USD / Night, taxes and fees included'."
+     },
+     "best": "Marriott Bonvoy / Agoda",
+     "implication": "Show night count in the CTA; consider nightly prices in the calendar for flexible travellers."
+    },
+    {
+     "criterion": "Guest & room picker",
+     "look_for": "Rooms, adults, children in one clear control; child ages handled.",
+     "driver": "Checkout too long / errors",
+     "evidence": "Mobbin",
+     "observations": {
+      "Booking.com": "One line: '1 room · 2 adults · No children'.",
+      "Agoda": "One line: '1 room 2 adults 0 children'.",
+      "Trip.com": "Full-screen stepper for rooms/adults/children with guidance on child ages and when to add rooms.",
+      "Marriott Bonvoy": "Compact '1 Room, 1 Guest' chip."
+     },
+     "best": "Trip.com",
+     "implication": "Explain child-age and room-split rules inside the picker, not after search."
+    },
+    {
+     "criterion": "Pre-search refinement",
+     "look_for": "Can users narrow before searching (rating, breakfast, offers)?",
+     "driver": "Search is the front door",
+     "evidence": "Mobbin",
+     "observations": {
+      "Booking.com": "None on the form.",
+      "Agoda": "'Show limited time offers first' checkbox.",
+      "Trip.com": "Quick chips on the form: Filters, Guest rating 4.5+, Breakfast included; 'Show homes & apartments first'.",
+      "Marriott Bonvoy": "Points vs standard rate and room count chips above the calendar."
+     },
+     "best": "Trip.com",
+     "implication": "Offer 2–3 high-intent quick filters on the search form."
+    },
+    {
+     "criterion": "Promo noise around search",
+     "look_for": "Do promos compete with the main task?",
+     "driver": "Search is the front door",
+     "evidence": "Mobbin",
+     "observations": {
+      "Booking.com": "Large credit-card promo directly below search.",
+      "Agoda": "Sponsored properties and coupon cards below search.",
+      "Trip.com": "New-user promo pack and deals carousel below search.",
+      "Marriott Bonvoy": "Minimal; content is offer-specific."
+     },
+     "best": "Marriott Bonvoy",
+     "implication": "Keep the area below search quiet until the user has searched."
+    }
+   ],
+   "scores": {
+    "Booking.com": 4,
+    "Agoda": 4,
+    "Trip.com": 4,
+    "Marriott Bonvoy": 5
+   }
+  },
+  {
+   "name": "2. RESULTS & FILTERING",
+   "criteria": [
+    {
+     "criterion": "All-in price on the results card",
+     "look_for": "Is the price on the card the real total (taxes and fees in), and is that stated?",
+     "driver": "Unexpected extra costs / total not upfront",
+     "evidence": "Mobbin",
+     "observations": {
+      "Booking.com": "Shows stay total ('2 nights: $250 $133') plus per-night line; tax inclusion not stated on the card.",
+      "Agoda": "Price labelled 'after taxes + fees'; a bottom sheet explains 'What you see is what you pay'.",
+      "Trip.com": "Large per-night price plus 'Total (incl. taxes & fees)' under every card.",
+      "Airbnb": "'Display total price' toggle is OFF by default; card shows '$49 night · $56 total' (before taxes).",
+      "Marriott Bonvoy": "Room cards show 'USD / Night — Taxes and fees included'."
+     },
+     "best": "Agoda / Trip.com",
+     "implication": "Default to an all-in price and say so in plain words on the card.",
+     "friction": [
+      "Airbnb"
+     ]
+    },
+    {
+     "criterion": "Filter & sort usability",
+     "look_for": "Easy to reach, active filters visible, result count updates.",
+     "driver": "Search is the front door",
+     "evidence": "Mobbin",
+     "observations": {
+      "Booking.com": "Sort / Filter / Map bar plus property-type chips with counts (Hotels 1044).",
+      "Agoda": "Filters / Price / Sort chips; sort includes lowest price, stars, top guest ratings.",
+      "Trip.com": "Active filters shown as removable chips; button shows live count 'Show Results (400+)'.",
+      "Airbnb": "Filter icon next to search pill.",
+      "Marriott Bonvoy": "Chips for room type, points, standard and special rates."
+     },
+     "best": "Trip.com",
+     "implication": "Show applied filters as chips and a live result count on the apply button."
+    },
+    {
+     "criterion": "Map access",
+     "look_for": "Can users switch to a map from results?",
+     "driver": "Search is the front door",
+     "evidence": "Mobbin",
+     "observations": {
+      "Booking.com": "Map button in the top bar.",
+      "Agoda": "Floating List / Gallery / Map switch.",
+      "Trip.com": "Floating Map / Saved pill.",
+      "Airbnb": "Floating Map pill.",
+      "Marriott Bonvoy": "Map on the property page (single-brand flow)."
+     },
+     "best": "Agoda",
+     "implication": "Keep a floating map toggle visible while scrolling."
+    },
+    {
+     "criterion": "Card scannability",
+     "look_for": "Rating, location, cancellation visible without clutter.",
+     "driver": "Checkout too long / errors",
+     "evidence": "Mobbin",
+     "observations": {
+      "Booking.com": "Score, review count, distance to centre, room type and beds.",
+      "Agoda": "Score and location, but many badges stacked (Sponsored, Boosted, coupon applied x2, Rare price, rankings).",
+      "Trip.com": "Rating, nearby landmark, free-cancellation tag, deal tags.",
+      "Airbnb": "Rating, host, short description.",
+      "Marriott Bonvoy": "Room size, bed type, price."
+     },
+     "best": "Booking.com / Trip.com",
+     "implication": "Limit badges to two per card; always show cancellation status.",
+     "friction": [
+      "Agoda"
+     ]
+    },
+    {
+     "criterion": "Urgency & persuasion",
+     "look_for": "Are scarcity cues honest and restrained?",
+     "driver": "Payment trust",
+     "evidence": "Mobbin",
+     "observations": {
+      "Booking.com": "Strikethrough discounts.",
+      "Agoda": "Heavy: 'Only 1 left', 'Booked 19 times in 24h', sold-out cards with average booked price.",
+      "Trip.com": "'Our last 3!', '$2 cheaper than when you last viewed', 'Saved by 235 people'.",
+      "Airbnb": "'Rare find' on detail page.",
+      "Marriott Bonvoy": "None seen."
+     },
+     "best": "Trip.com (price-drop note)",
+     "implication": "Prefer helpful signals (price dropped since last view) over pressure.",
+     "friction": [
+      "Agoda"
+     ]
+    },
+    {
+     "criterion": "Ads and sponsored labelling",
+     "look_for": "Are paid placements clearly marked?",
+     "driver": "Payment trust",
+     "evidence": "Mobbin",
+     "observations": {
+      "Booking.com": "Banner explains how payments affect listing order; card promo inline.",
+      "Agoda": "'Sponsored' and 'Boosted' labels; PayLater promo card inline in results.",
+      "Trip.com": "Deal tags; no sponsored label seen.",
+      "Airbnb": "None seen.",
+      "Marriott Bonvoy": "Not applicable."
+     },
+     "best": "Booking.com",
+     "implication": "If ranking is paid, say so near the list."
+    }
+   ],
+   "scores": {
+    "Booking.com": 4,
+    "Agoda": 3,
+    "Trip.com": 4,
+    "Airbnb": 2,
+    "Marriott Bonvoy": 4
+   }
+  },
+  {
+   "name": "3. PROPERTY DETAIL",
+   "criteria": [
+    {
+     "criterion": "Photo gallery",
+     "look_for": "Enough photos, easy to browse, count shown.",
+     "driver": "Search is the front door",
+     "evidence": "Mobbin",
+     "observations": {
+      "Booking.com": "Grid of 5 with '+71' tile.",
+      "Agoda": "Full-width carousel with '1/36'.",
+      "Airbnb": "Full-width hero with '1/27'.",
+      "Marriott Bonvoy": "Hero with '1/17'."
+     },
+     "best": "Booking.com",
+     "implication": "Show a grid preview so users see variety before tapping."
+    },
+    {
+     "criterion": "Reviews depth",
+     "look_for": "Score, count, category breakdown, relevant snippets.",
+     "driver": "Payment trust",
+     "evidence": "Mobbin",
+     "observations": {
+      "Booking.com": "Category bars (Cleanliness, Location, Value…), traveller-type quotes, AI 'Ask about the guest reviews'.",
+      "Agoda": "Score plus '84% of guests liked location' and short quotes.",
+      "Airbnb": "4.96 rating, 'Guest favorite' badge, 298 reviews.",
+      "Marriott Bonvoy": "3.6 (33 reviews) only."
+     },
+     "best": "Booking.com",
+     "implication": "Break reviews into categories; surface the one most relevant to the user."
+    },
+    {
+     "criterion": "Key reasons to book",
+     "look_for": "Are the decision-making facts summarised near the top?",
+     "driver": "Checkout too long / errors",
+     "evidence": "Mobbin",
+     "observations": {
+      "Booking.com": "'Property highlights' tiles and 'Most popular facilities'.",
+      "Agoda": "'Top reasons for booking': free cancellation, ideal location.",
+      "Airbnb": "Host card with Superhost and years hosting.",
+      "Marriott Bonvoy": "Address, phone, map near the top."
+     },
+     "best": "Agoda",
+     "implication": "Summarise 2–3 reasons (cancellation, location score) above the fold."
+    },
+    {
+     "criterion": "Sticky CTA with price and reassurance",
+     "look_for": "Does the fixed bottom bar show price and risk reducers?",
+     "driver": "Total not upfront",
+     "evidence": "Mobbin",
+     "observations": {
+      "Booking.com": "'You won't be charged yet' above Select; no price in the bar.",
+      "Agoda": "'Start at S$30' plus 'Choose my room'.",
+      "Airbnb": "'$356 for 2 nights' plus 'Free cancellation' tag and Reserve.",
+      "Marriott Bonvoy": "'From 40 USD / Night' plus Select Room."
+     },
+     "best": "Airbnb",
+     "implication": "Sticky bar = total for the stay + cancellation status + CTA."
+    },
+    {
+     "criterion": "Location clarity",
+     "look_for": "Map, address, nearby context.",
+     "driver": "Search is the front door",
+     "evidence": "Mobbin",
+     "observations": {
+      "Booking.com": "Distance to downtown on results; full location further down.",
+      "Agoda": "'What's nearby?' link and location score.",
+      "Airbnb": "Not captured in this flow.",
+      "Marriott Bonvoy": "Embedded map, address, phone, directions icon."
+     },
+     "best": "Marriott Bonvoy",
+     "implication": "Show a small map and travel time to key points."
+    }
+   ],
+   "scores": {
+    "Booking.com": 5,
+    "Agoda": 4,
+    "Airbnb": 5,
+    "Marriott Bonvoy": 3
+   }
+  },
+  {
+   "name": "4. ROOM & RATE SELECTION",
+   "criteria": [
+    {
+     "criterion": "Rate options are clear",
+     "look_for": "For each rate: meal plan, cancellation, payment timing, guests covered.",
+     "driver": "Unexpected extra costs",
+     "evidence": "Mobbin",
+     "observations": {
+      "Agoda": "Room card lists breakfast included, last check-in, free cancellation date, 'No payment until 7 July'.",
+      "Trip.com": "Rate box: free cancellation before 12:00 Mar 16, instant confirmation, prepay online, price for 2 adults, total incl. taxes.",
+      "Airbnb": "Single unit; no rate choice.",
+      "Marriott Bonvoy": "Room list then 'View Rates'; chips for standard, special and points rates.",
+      "World of Hyatt": "'Members Advance Purchase' with a 'Rate Rules' link; prices as avg/night."
+     },
+     "best": "Trip.com",
+     "implication": "One compact box per rate with all four facts; no extra tap needed."
+    },
+    {
+     "criterion": "Per-night vs total consistency",
+     "look_for": "Is the same price basis used from list to checkout?",
+     "driver": "Total not upfront",
+     "evidence": "Mobbin",
+     "observations": {
+      "Booking.com": "Total stay on results, '$44 includes taxes and fees' at checkout — consistent.",
+      "Agoda": "'After taxes + fees' throughout — consistent.",
+      "Trip.com": "Per-night plus total on cards, but budget filter is per night excl. taxes — inconsistent.",
+      "Airbnb": "Per night on results, total with service fee only at checkout — inconsistent.",
+      "Marriott Bonvoy": "Per night incl. taxes, then itemised 'Est. Taxes & Fees' at review.",
+      "World of Hyatt": "Avg/night only on rate list."
+     },
+     "best": "Agoda",
+     "implication": "Pick one basis (all-in total) and keep it from search to payment.",
+     "friction": [
+      "Trip.com",
+      "Airbnb"
+     ]
+    },
+    {
+     "criterion": "Flexibility and price tools",
+     "look_for": "Price alerts, calendar pricing, pay-later rates.",
+     "driver": "Unexpected extra costs",
+     "evidence": "Mobbin",
+     "observations": {
+      "Booking.com": "Not captured.",
+      "Agoda": "'Day Use' tab; pay-later rates.",
+      "Trip.com": "'Notify me when the price drops' toggle on room page.",
+      "Airbnb": "Not captured.",
+      "Marriott Bonvoy": "Nightly price calendar.",
+      "World of Hyatt": "Not captured."
+     },
+     "best": "Marriott Bonvoy / Trip.com",
+     "implication": "Add price-drop alerts for undecided users."
+    },
+    {
+     "criterion": "Rate-level urgency",
+     "look_for": "Is scarcity at rate level honest?",
+     "driver": "Payment trust",
+     "evidence": "Mobbin",
+     "observations": {
+      "Agoda": "'We have limited availability at this price - book now!' on the room card.",
+      "Trip.com": "'New Guest Offer' and discount tags on rate.",
+      "Marriott Bonvoy": "'Special Rate Available' tag."
+     },
+     "best": "Marriott Bonvoy",
+     "implication": "Use factual tags; avoid 'book now' pressure copy."
+    }
+   ],
+   "scores": {
+    "Agoda": 4,
+    "Trip.com": 5,
+    "Marriott Bonvoy": 4,
+    "World of Hyatt": 3
+   }
+  },
+  {
+   "name": "5. GUEST DETAILS & CHECKOUT",
+   "criteria": [
+    {
+     "criterion": "Number of steps and progress",
+     "look_for": "How many screens to payment; is progress clear?",
+     "driver": "Checkout too long / complicated",
+     "evidence": "Mobbin",
+     "observations": {
+      "Booking.com": "Several screens with a generic 'Next step' button.",
+      "Agoda": "CTA reads 'NEXT: FINAL STEP' with 'You will pay SGD0 today' under it.",
+      "Trip.com": "Single long form ending with Book.",
+      "Airbnb": "Single 'Request to book' summary with editable rows, then extra steps for photo and ID.",
+      "Marriott Bonvoy": "Single 'Review Reservation' screen (logged-in member, details prefilled).",
+      "World of Hyatt": "Long 'Your Information' form including full postal address."
+     },
+     "best": "Agoda / Marriott Bonvoy",
+     "implication": "Name the step in the CTA and keep checkout to one review screen where possible."
+    },
+    {
+     "criterion": "Forced account or extra identity steps",
+     "look_for": "Does the user have to create an account, add a photo or verify ID?",
+     "driver": "Forced account creation",
+     "evidence": "Mobbin + Self-test",
+     "observations": {
+      "Booking.com": "Captured logged in; guest checkout not visible.",
+      "Agoda": "Captured logged in; guest checkout not visible.",
+      "Trip.com": "Captured logged in; guest checkout not visible.",
+      "Airbnb": "Requires profile photo and identity verification before booking completes.",
+      "Marriott Bonvoy": "Captured as logged-in member.",
+      "World of Hyatt": "Asks for full home address."
+     },
+     "best": "—",
+     "implication": "Self-test guest checkout on each app; avoid ID or address steps unless the property needs them.",
+     "friction": [
+      "Airbnb",
+      "World of Hyatt"
+     ]
+    },
+    {
+     "criterion": "Booking conditions before payment",
+     "look_for": "Cancellation and prepayment terms stated in plain words.",
+     "driver": "Payment trust",
+     "evidence": "Mobbin",
+     "observations": {
+      "Booking.com": "'Booking conditions': free cancellation before Mar 18; no prepayment needed — pay at the property.",
+      "Agoda": "'Stay flexible! Cancel for free before 9 July 2026'.",
+      "Trip.com": "Fine print list plus a sticky 'Rest easy with free cancellation' bar.",
+      "Airbnb": "Free cancellation date with link to full policy; ground rules.",
+      "Marriott Bonvoy": "Not shown on the review screen in capture.",
+      "World of Hyatt": "Deposit and non-refundable policy in dense text with a consent line."
+     },
+     "best": "Booking.com",
+     "implication": "Two green ticked lines: cancellation deadline and when you pay.",
+     "friction": [
+      "World of Hyatt"
+     ]
+    },
+    {
+     "criterion": "Price breakdown and late fees",
+     "look_for": "Are all fees visible before the final step, with no surprises?",
+     "driver": "Unexpected extra costs",
+     "evidence": "Mobbin",
+     "observations": {
+      "Booking.com": "Sticky '$44 — Includes taxes and fees'.",
+      "Agoda": "Full breakdown: original price, coupons applied, tax 9% and service charge 10% included.",
+      "Trip.com": "'Pay at hotel' total with local-currency equivalent.",
+      "Airbnb": "Service fee and taxes appear only in checkout price details.",
+      "Marriott Bonvoy": "Summary of charges with 'Est. Taxes & Fees' and approximate home-currency total.",
+      "World of Hyatt": "Not captured."
+     },
+     "best": "Agoda",
+     "implication": "Show the breakdown, but make sure the total matches what the results page promised.",
+     "friction": [
+      "Airbnb"
+     ]
+    },
+    {
+     "criterion": "Special requests",
+     "look_for": "Optional, clearly not guaranteed.",
+     "driver": "Checkout too long / errors",
+     "evidence": "Mobbin",
+     "observations": {
+      "Booking.com": "Not captured.",
+      "Agoda": "Can be added post-booking via self-service.",
+      "Trip.com": "Optional section (e.g. elevator proximity) with 'cannot guarantee' note.",
+      "Airbnb": "Not applicable.",
+      "Marriott Bonvoy": "Not captured.",
+      "World of Hyatt": "Separate sheet for smoking preference and comments."
+     },
+     "best": "Trip.com",
+     "implication": "Keep requests optional and collapsed; state they are not guaranteed."
+    },
+    {
+     "criterion": "Distractions inside checkout",
+     "look_for": "Upsells or loyalty content that pull attention from paying.",
+     "driver": "Checkout too long / complicated",
+     "evidence": "Mobbin",
+     "observations": {
+      "Booking.com": "Genius loyalty card inside the booking overview.",
+      "Agoda": "'Savings corner' coupons (auto-applied, helpful).",
+      "Trip.com": "'Earn Trip Coins' row.",
+      "Airbnb": "None seen.",
+      "Marriott Bonvoy": "None seen.",
+      "World of Hyatt": "None seen."
+     },
+     "best": "Airbnb / Marriott Bonvoy",
+     "implication": "Keep loyalty to one line; auto-apply savings instead of asking users to hunt."
+    }
+   ],
+   "scores": {
+    "Booking.com": 4,
+    "Agoda": 4,
+    "Trip.com": 4,
+    "Airbnb": 2,
+    "Marriott Bonvoy": 4,
+    "World of Hyatt": 2
+   }
+  },
+  {
+   "name": "6. PAYMENT, TRUST & CONFIRMATION",
+   "criteria": [
+    {
+     "criterion": "Pay now vs pay later",
+     "look_for": "Is payment timing a clear choice with the amount due today?",
+     "driver": "Payment trust",
+     "evidence": "Mobbin",
+     "observations": {
+      "Booking.com": "'When do you want to pay?' — Pay at the property or Pay now, with 'your card won't be charged' explanation.",
+      "Agoda": "'You will pay SGD0 today' and the charge date.",
+      "Trip.com": "'Pay at Hotel' option.",
+      "Airbnb": "'Due now $12.97 / Charge on Jan 24 $51.87' split.",
+      "Marriott Bonvoy": "Not captured.",
+      "World of Hyatt": "1-night deposit required by card."
+     },
+     "best": "Booking.com",
+     "implication": "Make 'when you pay' an explicit choice and always show 'due today'."
+    },
+    {
+     "criterion": "Local payment methods (ID / SEA)",
+     "look_for": "E-wallets, virtual account, minimarket, PayLater.",
+     "driver": "Payment trust",
+     "evidence": "Mobbin + Self-test",
+     "observations": {
+      "Booking.com": "Card, Apple Pay, Klarna, Afterpay (US capture); no SEA methods visible.",
+      "Agoda": "Card form only in capture (Singapore); Atome PayLater promoted in results.",
+      "Trip.com": "Card form only in capture.",
+      "Airbnb": "Bank account, PayPal, card (US capture).",
+      "Marriott Bonvoy": "Saved Visa only.",
+      "World of Hyatt": "Saved Visa only."
+     },
+     "best": "— (needs Traveloka / Tiket.com)",
+     "implication": "Mobbin captures are mostly US/SG. Self-test Traveloka and Tiket.com for e-wallet, VA and minimarket patterns."
+    },
+    {
+     "criterion": "Security reassurance",
+     "look_for": "Visible trust signals at card entry.",
+     "driver": "Payment trust",
+     "evidence": "Mobbin",
+     "observations": {
+      "Booking.com": "Card brand logos; CVC helper.",
+      "Agoda": "Lock icons in card fields; terms line.",
+      "Trip.com": "'100% security guaranteed' badge and 'Your payment information is protected' under the button.",
+      "Airbnb": "Lock icon in card number field; card logos.",
+      "Marriott Bonvoy": "Not captured.",
+      "World of Hyatt": "Not captured."
+     },
+     "best": "Trip.com",
+     "implication": "Place a short reassurance line directly under the pay button."
+    },
+    {
+     "criterion": "Confirmation clarity",
+     "look_for": "Clear success state, booking number, what happens next.",
+     "driver": "Payment trust",
+     "evidence": "Mobbin",
+     "observations": {
+      "Booking.com": "Confirmation followed by Genius promo and a survey.",
+      "Agoda": "Confirmed message covered by a WhatsApp marketing pop-up.",
+      "Trip.com": "'Processing' status with booking number, message or call property, add to wallet and calendar.",
+      "Airbnb": "'Your stay is pending' — host has 24 hours to accept.",
+      "Marriott Bonvoy": "'You're All Set', confirmation number, email sent, stay summary.",
+      "World of Hyatt": "Confirmation number plus Apple Wallet room key."
+     },
+     "best": "Marriott Bonvoy",
+     "implication": "Lead with status + booking number + what happens next; no pop-ups.",
+     "friction": [
+      "Agoda"
+     ]
+    },
+    {
+     "criterion": "Post-booking self-service",
+     "look_for": "Can users change, cancel, get receipts without support?",
+     "driver": "Payment trust",
+     "evidence": "Mobbin",
+     "observations": {
+      "Booking.com": "Not captured.",
+      "Agoda": "Self-service list: change dates, cancel, resend voucher, receipt, special requests.",
+      "Trip.com": "Cancel booking and Options buttons on the booking page.",
+      "Airbnb": "Not captured.",
+      "Marriott Bonvoy": "Trips tab with Current / Past / Canceled.",
+      "World of Hyatt": "Not captured."
+     },
+     "best": "Agoda",
+     "implication": "Put the top 4–6 self-service actions on the confirmation page."
+    }
+   ],
+   "scores": {
+    "Booking.com": 4,
+    "Agoda": 3,
+    "Trip.com": 4,
+    "Airbnb": 3,
+    "Marriott Bonvoy": 4,
+    "World of Hyatt": 3
+   }
+  }
+ ],
+ "patterns": [
+  {
+   "type": "Copy",
+   "stage": "2. Results",
+   "pattern": "All-in price labelled 'after taxes + fees', with a one-tap 'What you see is what you pay' explanation",
+   "seen_on": "Agoda",
+   "why": "Directly addresses the #1 abandonment driver: unexpected extra costs.",
+   "url": "https://mobbin.com/flows/bc0567d8-5b81-4169-9304-89b464161d05"
+  },
+  {
+   "type": "Copy",
+   "stage": "2. Results",
+   "pattern": "Per-night price large, 'Total (incl. taxes & fees)' small underneath on every card",
+   "seen_on": "Trip.com",
+   "why": "Serves both mental models (nightly budget and trip total) without a toggle.",
+   "url": "https://mobbin.com/flows/6a5b67be-d997-47bb-8945-b0cd11bc45ac"
+  },
+  {
+   "type": "Copy",
+   "stage": "2. Results",
+   "pattern": "Applied filters as removable chips plus live count on the apply button ('Show Results (400+)')",
+   "seen_on": "Trip.com",
+   "why": "Users see the effect of each filter before committing.",
+   "url": "https://mobbin.com/flows/6a5b67be-d997-47bb-8945-b0cd11bc45ac"
+  },
+  {
+   "type": "Copy",
+   "stage": "1. Search",
+   "pattern": "Price calendar with nightly price under each date and total nights in the footer",
+   "seen_on": "Marriott Bonvoy",
+   "why": "Lets flexible travellers find the cheapest dates without repeated searches.",
+   "url": "https://mobbin.com/flows/52a394a6-30e7-4195-a561-f2ea2b09e97a"
+  },
+  {
+   "type": "Copy",
+   "stage": "3. Detail",
+   "pattern": "Sticky bar with stay total, 'Free cancellation' tag and Reserve",
+   "seen_on": "Airbnb",
+   "why": "Price and risk reducer are always visible at the moment of decision.",
+   "url": "https://mobbin.com/flows/5b91784c-84a8-41e5-9f29-138275095d5f"
+  },
+  {
+   "type": "Copy",
+   "stage": "3. Detail",
+   "pattern": "Review category bars plus 'Ask about the guest reviews' prompts",
+   "seen_on": "Booking.com",
+   "why": "Helps users answer their specific worry (cleanliness, location) quickly.",
+   "url": "https://mobbin.com/flows/70cc02a9-d3e8-45d0-8b49-3f2481a25193"
+  },
+  {
+   "type": "Copy",
+   "stage": "4. Room & rate",
+   "pattern": "One box per rate: cancellation deadline, instant confirmation, payment timing, guests covered, total",
+   "seen_on": "Trip.com",
+   "why": "All four decision facts visible without opening 'rate rules'.",
+   "url": "https://mobbin.com/flows/3e519c8a-47bd-489b-a020-77d860ca6ebf"
+  },
+  {
+   "type": "Copy",
+   "stage": "5. Checkout",
+   "pattern": "'Booking conditions' block with two green ticks: free cancellation deadline and 'no prepayment needed'",
+   "seen_on": "Booking.com",
+   "why": "Removes the two biggest doubts right before payment.",
+   "url": "https://mobbin.com/flows/4b416fa8-669a-410e-a2d5-f76b3e588874"
+  },
+  {
+   "type": "Copy",
+   "stage": "5. Checkout",
+   "pattern": "CTA names the step ('NEXT: FINAL STEP') and shows 'You will pay SGD0 today' under it",
+   "seen_on": "Agoda",
+   "why": "Sets expectations on effort left and money taken now.",
+   "url": "https://mobbin.com/flows/addc3e84-c5cf-4166-8dc4-dd45ff47209b"
+  },
+  {
+   "type": "Copy",
+   "stage": "6. Payment",
+   "pattern": "'When do you want to pay?' choice between pay at property and pay now",
+   "seen_on": "Booking.com",
+   "why": "Turns payment anxiety into a choice the user controls.",
+   "url": "https://mobbin.com/flows/4b416fa8-669a-410e-a2d5-f76b3e588874"
+  },
+  {
+   "type": "Copy",
+   "stage": "6. Confirmation",
+   "pattern": "Clean success screen: status, confirmation number, email sent, stay summary",
+   "seen_on": "Marriott Bonvoy",
+   "why": "No distractions at the moment the user needs reassurance.",
+   "url": "https://mobbin.com/flows/05dcfa8c-ef46-4b0f-91c4-9cb797fccf43"
+  },
+  {
+   "type": "Copy",
+   "stage": "6. Post-booking",
+   "pattern": "Self-service list on the booking: change dates, cancel, resend voucher, receipt",
+   "seen_on": "Agoda",
+   "why": "Cuts support contacts and builds trust in booking again.",
+   "url": "https://mobbin.com/flows/addc3e84-c5cf-4166-8dc4-dd45ff47209b"
+  },
+  {
+   "type": "Avoid",
+   "stage": "2. Results",
+   "pattern": "'Display total price' toggle off by default; fees and taxes appear only at checkout",
+   "seen_on": "Airbnb",
+   "why": "The exact late-fee surprise the abandonment research warns about.",
+   "url": "https://mobbin.com/flows/d871944b-0d2f-4c69-a4cb-1302e47d0163"
+  },
+  {
+   "type": "Avoid",
+   "stage": "2. Results",
+   "pattern": "Stacking 5+ badges per card (sponsored, coupons, rankings, scarcity)",
+   "seen_on": "Agoda",
+   "why": "Key facts get lost; feels pushy.",
+   "url": "https://mobbin.com/flows/eb14c8a0-01d7-4beb-b5d5-036e9bc4b23c"
+  },
+  {
+   "type": "Avoid",
+   "stage": "2. Results",
+   "pattern": "Budget filter on a different price basis (per night excl. taxes) from the cards (incl. taxes)",
+   "seen_on": "Trip.com",
+   "why": "Users set a budget and then see prices that look over it.",
+   "url": "https://mobbin.com/flows/6a5b67be-d997-47bb-8945-b0cd11bc45ac"
+  },
+  {
+   "type": "Avoid",
+   "stage": "5. Checkout",
+   "pattern": "Profile photo and identity verification added at the end of booking",
+   "seen_on": "Airbnb",
+   "why": "Late, unexpected effort right before commitment.",
+   "url": "https://mobbin.com/flows/5b91784c-84a8-41e5-9f29-138275095d5f"
+  },
+  {
+   "type": "Avoid",
+   "stage": "5. Checkout",
+   "pattern": "Full postal address required for a hotel stay",
+   "seen_on": "World of Hyatt",
+   "why": "Adds fields that most hotels do not need.",
+   "url": "https://mobbin.com/flows/c8cb38ce-383e-4cf0-85ea-8ffa7216972b"
+  },
+  {
+   "type": "Avoid",
+   "stage": "6. Confirmation",
+   "pattern": "Marketing pop-up (WhatsApp sign-up) covering the booking confirmation",
+   "seen_on": "Agoda",
+   "why": "Interrupts the reassurance moment; looks like an error state.",
+   "url": "https://mobbin.com/flows/addc3e84-c5cf-4166-8dc4-dd45ff47209b"
+  },
+  {
+   "type": "Reference",
+   "stage": "6. Payment",
+   "pattern": "Wallet sheet listing e-wallet balance with Top up, saved cards, and 'Virtual Account' as an add method",
+   "seen_on": "GoPay (not a hotel app)",
+   "why": "Indonesian payment pattern to adapt while Traveloka / Tiket.com are self-tested.",
+   "url": "https://mobbin.com/screens/fb70bed4-d2b8-4e3e-8c37-1c77554d6017"
+  }
+ ],
+ "friction": [
+  {
+   "platform": "Airbnb",
+   "device": "iOS (Mobbin)",
+   "step": "Results",
+   "what": "Results show '$49 night · $56 total' with the total-price toggle off; at checkout a service fee and taxes push the total to $64.84.",
+   "severity": 3,
+   "url": "https://mobbin.com/flows/d871944b-0d2f-4c69-a4cb-1302e47d0163",
+   "implication": "Show the all-in total from the first results screen."
+  },
+  {
+   "platform": "Airbnb",
+   "device": "iOS (Mobbin)",
+   "step": "Checkout",
+   "what": "After entering payment, the user must add a profile photo and verify identity before the booking completes.",
+   "severity": 3,
+   "url": "https://mobbin.com/flows/5b91784c-84a8-41e5-9f29-138275095d5f",
+   "implication": "Never add new effort after payment details; ask only what the property needs, and ask early."
+  },
+  {
+   "platform": "Airbnb",
+   "device": "iOS (Mobbin)",
+   "step": "Confirmation",
+   "what": "Booking ends as 'pending' — host has 24 hours to accept.",
+   "severity": 2,
+   "url": "https://mobbin.com/flows/d871944b-0d2f-4c69-a4cb-1302e47d0163",
+   "implication": "Prefer instant confirmation; if pending, state the max wait and what happens to the money."
+  },
+  {
+   "platform": "Agoda",
+   "device": "iOS (Mobbin)",
+   "step": "Confirmation",
+   "what": "WhatsApp sign-up pop-up covers the 'booking confirmed' message.",
+   "severity": 2,
+   "url": "https://mobbin.com/flows/addc3e84-c5cf-4166-8dc4-dd45ff47209b",
+   "implication": "Keep confirmation free of marketing; ask for opt-ins later."
+  },
+  {
+   "platform": "Agoda",
+   "device": "iOS (Mobbin)",
+   "step": "Results",
+   "what": "Cards carry many stacked badges (sponsored, boosted, two coupon lines, ranking, scarcity), pushing key facts down.",
+   "severity": 2,
+   "url": "https://mobbin.com/flows/eb14c8a0-01d7-4beb-b5d5-036e9bc4b23c",
+   "implication": "Cap badges per card and prioritise cancellation and rating."
+  },
+  {
+   "platform": "Agoda",
+   "device": "iOS (Mobbin)",
+   "step": "Room selection",
+   "what": "'We have limited availability at this price - book now!' pressure copy on the room card.",
+   "severity": 1,
+   "url": "https://mobbin.com/flows/addc3e84-c5cf-4166-8dc4-dd45ff47209b",
+   "implication": "Use factual availability ('2 rooms left at this price') without commands."
+  },
+  {
+   "platform": "Trip.com",
+   "device": "iOS (Mobbin)",
+   "step": "Results",
+   "what": "Budget filter works on per-night price excluding taxes, while cards highlight totals including taxes.",
+   "severity": 2,
+   "url": "https://mobbin.com/flows/6a5b67be-d997-47bb-8945-b0cd11bc45ac",
+   "implication": "Use the same price basis in filters and on cards."
+  },
+  {
+   "platform": "Booking.com",
+   "device": "iOS (Mobbin)",
+   "step": "Search",
+   "what": "Large credit-card promo sits directly under the search form.",
+   "severity": 1,
+   "url": "https://mobbin.com/flows/3b0d9a5a-648d-4b9b-8270-da55e4cc37aa",
+   "implication": "Keep the area under search free of cross-sell."
+  },
+  {
+   "platform": "Booking.com",
+   "device": "iOS (Mobbin)",
+   "step": "Detail",
+   "what": "Sticky bar says 'You won't be charged yet' but shows no price.",
+   "severity": 1,
+   "url": "https://mobbin.com/flows/4b416fa8-669a-410e-a2d5-f76b3e588874",
+   "implication": "Pair reassurance copy with the stay total."
+  },
+  {
+   "platform": "World of Hyatt",
+   "device": "iOS (Mobbin)",
+   "step": "Checkout",
+   "what": "Guest form requires full home address; deposit and non-refundable policy shown as dense text.",
+   "severity": 2,
+   "url": "https://mobbin.com/flows/c8cb38ce-383e-4cf0-85ea-8ffa7216972b",
+   "implication": "Ask for name, email, phone only; summarise policy in two plain lines."
+  },
+  {
+   "platform": "World of Hyatt",
+   "device": "iOS (Mobbin)",
+   "step": "Room selection",
+   "what": "Rates shown as 'Avg/Night' only; total not visible on the rate list.",
+   "severity": 1,
+   "url": "https://mobbin.com/flows/c8cb38ce-383e-4cf0-85ea-8ffa7216972b",
+   "implication": "Show the stay total next to each rate."
+  },
+  {
+   "platform": "Marriott Bonvoy",
+   "device": "iOS (Mobbin)",
+   "step": "Checkout",
+   "what": "Rooms say 'taxes and fees included', but the review screen itemises 'Est. Taxes & Fees' — the word 'estimated' can raise doubt.",
+   "severity": 1,
+   "url": "https://mobbin.com/flows/05dcfa8c-ef46-4b0f-91c4-9cb797fccf43",
+   "implication": "Avoid 'estimated' at final review; show the exact amount charged."
+  }
+ ],
+ "evidence": [
+  {
+   "platform": "Booking.com",
+   "flow": "Stays",
+   "stages": "1 Search",
+   "screens": 14,
+   "context": "US, USD, 2026 dates",
+   "url": "https://mobbin.com/flows/3b0d9a5a-648d-4b9b-8270-da55e4cc37aa"
+  },
+  {
+   "platform": "Booking.com",
+   "flow": "Property detail",
+   "stages": "2 Results, 3 Detail",
+   "screens": 12,
+   "context": "Tokyo listing, USD",
+   "url": "https://mobbin.com/flows/70cc02a9-d3e8-45d0-8b49-3f2481a25193"
+  },
+  {
+   "platform": "Booking.com",
+   "flow": "Booking a property",
+   "stages": "3 Detail, 5 Checkout, 6 Payment",
+   "screens": 21,
+   "context": "Tokyo listing, USD, 2026 dates",
+   "url": "https://mobbin.com/flows/4b416fa8-669a-410e-a2d5-f76b3e588874"
+  },
+  {
+   "platform": "Agoda",
+   "flow": "Searching hotels",
+   "stages": "1 Search, 2 Results",
+   "screens": 20,
+   "context": "Singapore, SGD, 2026 dates",
+   "url": "https://mobbin.com/flows/bc0567d8-5b81-4169-9304-89b464161d05"
+  },
+  {
+   "platform": "Agoda",
+   "flow": "Sorting hotels",
+   "stages": "2 Results",
+   "screens": 3,
+   "context": "Singapore, SGD",
+   "url": "https://mobbin.com/flows/eb14c8a0-01d7-4beb-b5d5-036e9bc4b23c"
+  },
+  {
+   "platform": "Agoda",
+   "flow": "Booking a hotel",
+   "stages": "3 Detail, 4 Rate, 5 Checkout, 6 Confirmation",
+   "screens": 21,
+   "context": "Singapore, SGD, 2026 dates",
+   "url": "https://mobbin.com/flows/addc3e84-c5cf-4166-8dc4-dd45ff47209b"
+  },
+  {
+   "platform": "Agoda",
+   "flow": "Paying for a booking",
+   "stages": "6 Payment, post-booking",
+   "screens": 5,
+   "context": "Singapore, SGD",
+   "url": "https://mobbin.com/flows/0e722e14-57ff-4e8f-8c0f-da4985c95568"
+  },
+  {
+   "platform": "Trip.com",
+   "flow": "Searching stays",
+   "stages": "1 Search, 2 Results",
+   "screens": 14,
+   "context": "Ho Chi Minh City, USD, 2025",
+   "url": "https://mobbin.com/flows/4ca5e62f-81a7-40a8-ba02-edb160ed1955"
+  },
+  {
+   "platform": "Trip.com",
+   "flow": "Filtering stays",
+   "stages": "2 Results",
+   "screens": 6,
+   "context": "Ho Chi Minh City, USD",
+   "url": "https://mobbin.com/flows/6a5b67be-d997-47bb-8945-b0cd11bc45ac"
+  },
+  {
+   "platform": "Trip.com",
+   "flow": "Booking a room",
+   "stages": "4 Rate, 5 Checkout, 6 Payment & Confirmation",
+   "screens": 13,
+   "context": "Ho Chi Minh City, USD/VND, 2025",
+   "url": "https://mobbin.com/flows/3e519c8a-47bd-489b-a020-77d860ca6ebf"
+  },
+  {
+   "platform": "Airbnb",
+   "flow": "Booking a home",
+   "stages": "3 Detail, 5 Checkout, 6 Payment",
+   "screens": 16,
+   "context": "New York, USD, 2025",
+   "url": "https://mobbin.com/flows/5b91784c-84a8-41e5-9f29-138275095d5f"
+  },
+  {
+   "platform": "Airbnb",
+   "flow": "Booking a stay",
+   "stages": "2 Results, 5 Checkout, 6 Payment & Confirmation",
+   "screens": 16,
+   "context": "Washington, USD, 2025",
+   "url": "https://mobbin.com/flows/d871944b-0d2f-4c69-a4cb-1302e47d0163"
+  },
+  {
+   "platform": "Marriott Bonvoy",
+   "flow": "Searching rooms by offer",
+   "stages": "1 Search, 4 Rate",
+   "screens": 4,
+   "context": "Kanazawa, USD, 2025",
+   "url": "https://mobbin.com/flows/52a394a6-30e7-4195-a561-f2ea2b09e97a"
+  },
+  {
+   "platform": "Marriott Bonvoy",
+   "flow": "Booking a room",
+   "stages": "3 Detail, 4 Rate, 5 Checkout, 6 Confirmation",
+   "screens": 14,
+   "context": "Kanazawa, JPY/USD, member, 2025",
+   "url": "https://mobbin.com/flows/05dcfa8c-ef46-4b0f-91c4-9cb797fccf43"
+  },
+  {
+   "platform": "World of Hyatt",
+   "flow": "Booking a hotel",
+   "stages": "4 Rate, 5 Checkout, 6 Confirmation",
+   "screens": 17,
+   "context": "US, USD, 2024",
+   "url": "https://mobbin.com/flows/c8cb38ce-383e-4cf0-85ea-8ffa7216972b"
+  },
+  {
+   "platform": "GoPay (reference)",
+   "flow": "Wallet payment methods",
+   "stages": "6 Payment (local methods)",
+   "screens": 1,
+   "context": "Indonesia, IDR",
+   "url": "https://mobbin.com/screens/fb70bed4-d2b8-4e3e-8c37-1c77554d6017"
+  }
+ ]
+}
